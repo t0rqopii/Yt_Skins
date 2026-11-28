@@ -1,0 +1,73 @@
+{
+  "format": "youtube-theme-studio",
+  "version": 3,
+  "meta": {
+    "name": "Paper",
+    "description": "Warm, quiet light theme with ink text and a terracotta accent.",
+    "author": "t0rqopii",
+    "tags": [
+      "light",
+      "minimal"
+    ],
+    "added": "2026-11-27"
+  },
+  "settings": {
+    "background": "#f4efe6",
+    "surface": "#ebe4d7",
+    "text": "#2b2620",
+    "muted": "#7a6f62",
+    "accent": "#c2410c",
+    "title1": "#2b2620",
+    "title2": "#c2410c",
+    "titleStyle": "solid",
+    "backgroundMode": "solid",
+    "surfaceStyle": "standard",
+    "panelTransparency": 0,
+    "radius": 10,
+    "hover": "lift",
+    "highlightColor": "#e5d9c4",
+    "searchBackground": "#fbf8f2",
+    "searchText": "#2b2620",
+    "searchBorder": "#d6cbb8",
+    "chipBackground": "#e7dfd0",
+    "chipText": "#2b2620",
+    "chipSelectedBackground": "#2b2620",
+    "chipSelectedText": "#f4efe6",
+    "chipRadius": 8,
+    "playerProgress": "#c2410c",
+    "playerGlow": false
+  },
+  "profiles": [
+    {
+      "id": "paper-light",
+      "name": "Paper",
+      "settings": {
+        "background": "#f4efe6",
+        "surface": "#ebe4d7",
+        "text": "#2b2620",
+        "muted": "#7a6f62",
+        "accent": "#c2410c",
+        "title1": "#2b2620",
+        "title2": "#c2410c",
+        "titleStyle": "solid",
+        "backgroundMode": "solid",
+        "surfaceStyle": "standard",
+        "panelTransparency": 0,
+        "radius": 10,
+        "hover": "lift",
+        "highlightColor": "#e5d9c4",
+        "searchBackground": "#fbf8f2",
+        "searchText": "#2b2620",
+        "searchBorder": "#d6cbb8",
+        "chipBackground": "#e7dfd0",
+        "chipText": "#2b2620",
+        "chipSelectedBackground": "#2b2620",
+        "chipSelectedText": "#f4efe6",
+        "chipRadius": 8,
+        "playerProgress": "#c2410c",
+        "playerGlow": false
+      }
+    }
+  ],
+  "assets": {}
+}

@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Theme Studio",
+  "version": "5.0.0",
+  "description": "Make and apply a personal YouTube theme.",
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Open YouTube Theme Studio",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "studio.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "interactions.js",
+        "search-popup.js",
+        "selectors.js",
+        "design.js",
+        "shader.js",
+        "schema.js",
+        "effects.js",
+        "theme.js",
+        "runtime.js",
+        "content.js",
+        "companion.js",
+        "profile-switcher.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

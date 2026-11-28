@@ -1,0 +1,13 @@
+name: Feature request
+description: Suggest a new control, effect or YouTube area to theme
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it useful?

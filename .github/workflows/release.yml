@@ -1,0 +1,52 @@
+name: Release
+
+# Push a tag like v4.2.0 and this builds the extension zip and publishes a GitHub Release.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check tag matches manifest version
+        id: ver
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          MANIFEST=$(jq -r .version extension/manifest.json)
+          if [ "$TAG" != "$MANIFEST" ]; then
+            echo "::error::Tag v$TAG does not match manifest.json version $MANIFEST"
+            exit 1
+          fi
+          echo "version=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Validate themes
+        run: node scripts/validate-themes.js
+
+      - name: Build zip
+        run: |
+          cd extension
+          zip -r -X "../youtube-theme-studio-${{ steps.ver.outputs.version }}.zip" . -x '.*'
+
+      - name: Pull notes from CHANGELOG
+        run: |
+          awk -v v="${{ steps.ver.outputs.version }}" '
+            $0 ~ "^## \\[?"v"\\]?" {on=1; next}
+            on && /^## / {exit}
+            on {print}
+          ' CHANGELOG.md > notes.md
+          [ -s notes.md ] || echo "See CHANGELOG.md" > notes.md
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            "youtube-theme-studio-${{ steps.ver.outputs.version }}.zip" \
+            --title "YouTube Theme Studio ${{ steps.ver.outputs.version }}" \
+            --notes-file notes.md

@@ -1,0 +1,26 @@
+name: Theme submission
+description: Share a theme without opening a pull request
+labels: [theme]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Theme name
+    validations: { required: true }
+  - type: textarea
+    id: description
+    attributes:
+      label: One-line description
+    validations: { required: true }
+  - type: textarea
+    id: file
+    attributes:
+      label: Theme file
+      description: Drag your exported .json backup here (Export → Download backup). Remove profiles you don't want to share first.
+    validations: { required: true }
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: A screenshot of YouTube or the studio preview with your theme on.
+    validations: { required: true }

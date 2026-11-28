@@ -1,0 +1,114 @@
+{
+  "format": "youtube-theme-studio",
+  "version": 3,
+  "meta": {
+    "name": "Sakura Dusk",
+    "description": "Plum night sky, blossom-pink accents and soft gradient titles.",
+    "author": "t0rqopii",
+    "tags": [
+      "dark",
+      "pink",
+      "gradient"
+    ],
+    "added": "2026-11-27"
+  },
+  "settings": {
+    "background": "#1a1020",
+    "surface": "#2a1a30",
+    "text": "#fbeaf2",
+    "muted": "#c7a4b8",
+    "accent": "#f9a8d4",
+    "title1": "#fbcfe8",
+    "title2": "#f472b6",
+    "titleStyle": "gradient",
+    "backgroundMode": "gradient",
+    "gradientType": "linear",
+    "gradientAngle": 160,
+    "backgroundStops": [
+      {
+        "color": "#2b1533",
+        "alpha": 100,
+        "position": 0
+      },
+      {
+        "color": "#1a1020",
+        "alpha": 100,
+        "position": 55
+      },
+      {
+        "color": "#3a1630",
+        "alpha": 100,
+        "position": 100
+      }
+    ],
+    "surfaceStyle": "glass",
+    "glassBlur": 10,
+    "panelTransparency": 35,
+    "radius": 18,
+    "hover": "zoom",
+    "searchBackground": "#2a1a30",
+    "searchText": "#fbeaf2",
+    "searchBorder": "#5a3550",
+    "chipBackground": "#33203a",
+    "chipText": "#fbeaf2",
+    "chipSelectedBackground": "#f9a8d4",
+    "chipSelectedText": "#2a0f1f",
+    "chipRadius": 20,
+    "searchRadius": 26,
+    "playerProgress": "#f472b6",
+    "playerGlowColor": "#f472b6"
+  },
+  "profiles": [
+    {
+      "id": "sakura-dusk",
+      "name": "Sakura Dusk",
+      "settings": {
+        "background": "#1a1020",
+        "surface": "#2a1a30",
+        "text": "#fbeaf2",
+        "muted": "#c7a4b8",
+        "accent": "#f9a8d4",
+        "title1": "#fbcfe8",
+        "title2": "#f472b6",
+        "titleStyle": "gradient",
+        "backgroundMode": "gradient",
+        "gradientType": "linear",
+        "gradientAngle": 160,
+        "backgroundStops": [
+          {
+            "color": "#2b1533",
+            "alpha": 100,
+            "position": 0
+          },
+          {
+            "color": "#1a1020",
+            "alpha": 100,
+            "position": 55
+          },
+          {
+            "color": "#3a1630",
+            "alpha": 100,
+            "position": 100
+          }
+        ],
+        "surfaceStyle": "glass",
+        "glassBlur": 10,
+        "panelTransparency": 35,
+        "radius": 18,
+        "hover": "zoom",
+        "searchBackground": "#2a1a30",
+        "searchText": "#fbeaf2",
+        "searchBorder": "#5a3550",
+        "chipBackground": "#33203a",
+        "chipText": "#fbeaf2",
+        "chipSelectedBackground": "#f9a8d4",
+        "chipSelectedText": "#2a0f1f",
+        "chipRadius": 20,
+        "searchRadius": 26,
+        "playerProgress": "#f472b6",
+        "playerGlowColor": "#f472b6"
+      }
+    }
+  ],
+  "assets": {}
+}
